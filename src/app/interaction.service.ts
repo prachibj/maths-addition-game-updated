@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 export class InteractionService {
 
   private randomNumber$ = new Observable(observer => {
-    const num1 = Math.floor(Math.random() * 9) + 1;
-    const num2 = Math.floor(Math.random() * 9) + 1;
+    const num1 = Math.floor(Math.random() * 10);
+    const num2 = Math.floor(Math.random() * 10);
     observer.next({ num1: num1, num2: num2 });
   });
 
