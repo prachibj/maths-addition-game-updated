@@ -1,6 +1,5 @@
 <div class="content" role="main">
 
-
   <div class="container">
     <h1 class="title">Addition Game</h1>
     <div class="question">
@@ -9,18 +8,16 @@
       <p class="number">{{num2}}</p>
       <p class="operator">=</p>
       <input class='answer' type="number" [(ngModel)]="answer">
-      <button class="submit" (click)="checkAnswer()" data-bs-toggle="modal" data-bs-target="#resultModal">Check
-        Answer</button>
+      <button class="submit" (click)="checkAnswer()" data-bs-toggle="modal" data-bs-target="#resultModal">Check Answer</button>
     </div>
   </div>
-  <div class="modal" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
 
+  <div class="modal" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <p class="modal-title" id="resultModalLabel" *ngIf="!isIncorrect">Congratulations!</p>
           <p class="modal-title" id="resultModalLabel" *ngIf="isIncorrect">Try Again</p>
-
         </div>
         <div class="modal-body">
           <p *ngIf="!isIncorrect" class="correct">You took {{time}} seconds to answer the question.</p>
